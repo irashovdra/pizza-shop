@@ -169,8 +169,11 @@ function closeOrderModal() {
   });
 }
 
-closeOrderModal();
-
 pizzaElements.addEventListener("click", (event) => {
   openOrderModal();
+  const closeModalBtn = document.querySelector(".order-modal__close");
+  closeModalBtn.addEventListener("click", () => {
+    body.classList.add("is-hidden");
+  });
+  closeOrderModal();
 });
